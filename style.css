@@ -2,12 +2,17 @@ body {
   background: #f0f0f0;
 }
 
+/* Estilos del contenedor */
+
 .container {
-  perspective: 1000px;
-  perspective-origin: 50% 50%;
+  perspective: 1000px; /* Define la perspectiva para los elementos 3D */
+  perspective-origin: 50% 50%; /* Establece el punto de origen */
   font-family: 'fontawesome';
   height: 100vh;
 }
+
+
+/* Estilos del cubo */
 
 .container .cube {
   position: relative;
@@ -119,7 +124,11 @@ body {
   bottom: 45px;
   right: 26px;
 }
+
+/* Estilos de la animación */
+
 @keyframes animate {
+  /* Define una animación con una serie de transformaciones 3D a lo largo del tiempo */
   0% {
     transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
   }

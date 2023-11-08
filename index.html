@@ -44,19 +44,21 @@
 	</div>
 	<script type="text/javascript">
 		let cube = document.getElementById('cube');
+		// Definimos una matriz de ángulos 
 		angleArray = [[0, 0, 0], [-310, -362, -38], [-400, -320, -2], [135, -217, -88], [-224, -317, 5], [-47, -219, -81], [-133, -360, -53]];
-		cube.addEventListener('click', function (e) {
 
-		  cube.style.animation = 'nuevaAnimacion 1.4s linear';
-	  
-		  const randomAngle = Math.floor(Math.random() * 6) + 1;
-		  cube.style.transform = 'rotateX(' + angleArray[randomAngle][0] + 'deg) rotateY(' + angleArray[randomAngle][1] + 'deg) rotateZ(' + angleArray[randomAngle][2] + 'deg)';
-		  cube.style.transition = '1s linear';
-	  
-		  cube.addEventListener('animationend', function (e) {
-			cube.style.animation = '';
-		  });
+		cube.addEventListener('click', function (e) {
+			// Configuramos una animación llamada 'nuevaAnimacion' con duración de 1.4 segundos y velocidad lineal
+			cube.style.animation = 'nuevaAnimacion 1.4s linear';
+			// Se selecciona un ángulo aleatorio de la matriz
+			const randomAngle = Math.floor(Math.random() * 6) + 1;
+			// Se rota el cubo
+			cube.style.transform = 'rotateX(' + angleArray[randomAngle][0] + 'deg) rotateY(' + angleArray[randomAngle][1] + 'deg) rotateZ(' + angleArray[randomAngle][2] + 'deg)';
+			cube.style.transition = '1s linear';
+			cube.addEventListener('animationend', function (e) {
+				cube.style.animation = '';
+			});
 		});
-	  </script>
+	</script>	
 </body>
 </html>
