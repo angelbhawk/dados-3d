@@ -1,13 +1,15 @@
-body{
+body {
   background: #f0f0f0;
 }
-.container{
+
+.container {
   perspective: 1000px;
   perspective-origin: 50% 50%;
   font-family: 'fontawesome';
   height: 100vh;
 }
-.container .cube{
+
+.container .cube {
   position: relative;
   left: 45%;
   top: 40%;
@@ -16,44 +18,54 @@ body{
   transform-style: preserve-3d;
   cursor: pointer;
   transform: rotateX(135deg) rotateY(-217deg) rotateZ(-88deg);
+  border-radius: 20px; 
 }
-.container .cube div{
+
+.container .cube div {
   position: absolute;
   box-sizing: border-box;
   padding: 10px;
   height: 100%;
   width: 100%;
-  border:2px solid #eee;
+  border: 2px solid #eee;
+  border-radius: 20px; 
   color: #fff;
 }
-.container .cube div span{
+
+.container .cube div span {
   font-size: 32px;
   font-family: 'fontawesome';
 }
-.container .cube .front{
+
+.container .cube .front {
   background: red;
   transform: translateZ(100px);
 }
-.container .cube .back{
+
+.container .cube .back {
   background: red;
   transform: translateZ(-100px) rotateY(180deg);
 }
-.container .cube .right{
+
+.container .cube .right {
   background: red;
   transform-origin: top right;
   transform: rotateY(-270deg) translateX(100px);
 }
-.container .cube .left{
+
+.container .cube .left {
   background: red;
   transform-origin: center left;
   transform: rotateY(270deg) translateX(-100px);
 }
-.container .cube .top{
+
+.container .cube .top {
   background: red;
   transform-origin: top center;
   transform: rotateX(-270deg) translateY(-100px);
 }
-.container .cube .bottom{
+
+.container .cube .bottom {
   background: red;
   transform-origin: bottom center;
   transform: rotateX(270deg) translateY(100px);
